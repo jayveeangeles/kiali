@@ -83,4 +83,7 @@ For developers who want to test specific tasks, you can temporarily add "tags: t
 ```
 operator-sdk new kiali-operator --api-version=kiali.io/v1alpha1 --kind=Kiali --type=ansible --skip-git-init
 ```
-
+* To install for Openshift:
+```
+make operator-create OPERATOR_WATCH_NAMESPACE=** ACCESSIBLE_NAMESPACES=** OPERATOR_IMAGE_NAME=docker-registry.default.svc:5000/kiali-operator/kiali-operator OPERATOR_IMAGE_VERSION=v1.0.0
+```
